@@ -20,7 +20,7 @@ def powerset(iterable):
     s = list(iterable)
     return chain.from_iterable(combinations(s, r) for r in range(2,width+1))
 
-# poweset makes sets of sizes from 2 until the width of the poset. 
+# powerset makes sets of sizes from 2 until the width of the poset. 
 
 def binomialcoef(j,k):
     return np.math.factorial(j)/(np.math.factorial(k)*np.math.factorial(j-k))
