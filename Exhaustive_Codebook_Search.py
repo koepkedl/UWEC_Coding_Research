@@ -109,7 +109,12 @@ print("--- %s seconds ---" % (time.time() - start_time))
 print('\n')
 print(len(partially_correctable_codebooks))
 print("Codebooks that are partially correctable for block length "+ str(n))
-print(partially_correctable_codebooks)
+# print(partially_correctable_codebooks)
+
+import pandas as pd
+
+df = pd.DataFrame(partially_correctable_codebooks)
+df.to_csv('Good_Codebooks.csv', index=True)
 
 
 # In[4]:
