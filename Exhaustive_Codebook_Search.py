@@ -103,6 +103,12 @@ a == b
 
 # compute pairs [A, B] of subsets of `codewords` such that A and B are disjoint
 # where |A| and |B| are between 2 and width 
+### Questions for Duncan:
+##   > Can we instead generate subsets C of `codewords` and 
+##   > then here compute the list [A, B] of all ways of writing C = A U B, A n B = 0?
+##   > So, first we'd handle all subsets C of size 4. They produce some disjoint pairs [A, B], 
+##   > and [A, B] doesn't appear in any other subset C of size 4.
+##   > Then, move on to |C| = 5, |C| = 6, etc.
 codebookpairs = [ 
     [codebooks[i], codebooks[x]]
     for i in tqdm(range(len(codebooks)))
@@ -110,11 +116,10 @@ codebookpairs = [
     
     ## it's faster to check it this way than in the commented out way
     ## but this is still O(N^2), N = len(codebooks) since pairwise-check
-    ##   > Can we instead generate subsets C of `codewords` and 
-    ##   > then here expand to all ways of writing C = A U B, A n B = 0?
     if len(codebooks[i]) + len(codebooks[x]) == len(set(codebooks[i] + codebooks[x]))
     ## This check happens to be 33% slower, but it's still O(N^2)
     # if len(set(codebooks[i]).intersection(set(codebooks[x]))) == 0
+
 ]
 # i = 0
 # while len(codebooks) > i:
