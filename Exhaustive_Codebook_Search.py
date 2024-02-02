@@ -6,7 +6,7 @@
 
 # Duncan Koepke, University of Wisconsin-Eau Claire
 
-# 2023 Research with Dr. Allison Beemer
+# 2023-24 Research with Dr. Allison Beemer
 
 
 import numpy as np
