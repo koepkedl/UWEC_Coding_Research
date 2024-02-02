@@ -9,6 +9,29 @@
 # 2023-24 Research with Dr. Allison Beemer
 
 
+
+
+# def vectorsupport(i,j):
+#     supp1 = []
+#     supp2 = []
+#     for k in range(n):
+#         e = n-1-k
+#         supp1.append(i // (10**e) %10 )
+#         supp2.append(j // (10**e) %10 )
+#     negative = []
+#     positive = []
+#     for j in range(n):
+#         z = supp1[j]-supp2[j]
+#         if z>0:
+#             positive.append(z)
+#         if z<0:
+#             negative.append(z)
+#     if len(positive)>0 and len(negative)>0:
+#         return True
+#     else:
+#         return False
+
+
 import numpy as np
 import math
 from itertools import chain, combinations, product
